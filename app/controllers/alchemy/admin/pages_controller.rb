@@ -75,7 +75,9 @@ module Alchemy
       # Edit the content of the page and all its elements and contents.
       def edit
         # fetching page via before filter
-        if @page.locked? && @page.locker && @page.locker.logged_in? && @page.locker != current_user
+        if false
+        # JDY this errors: no method locker for @page... seems like implementation is incomplete
+        # if @page.locked? && @page.locker && @page.locker.logged_in? && @page.locker != current_user
           flash[:notice] = _t("This page is locked by %{name}", :name => (@page.locker.name rescue _t(:unknown)))
           redirect_to admin_pages_path
         else
