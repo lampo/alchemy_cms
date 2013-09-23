@@ -37,15 +37,17 @@ module Alchemy
     # @language fetched via before_filter in alchemy_controller
     # querying for search results if any query is present via before_filter
     def show
-      respond_to do |format|
-        format.html { render }
-        format.rss {
-          if @page.contains_feed?
-            render :action => "show", :layout => false, :handlers => [:builder]
-          else
-            render :xml => {:error => 'Not found'}, :status => 404
-          end
-        }
+      current_user_as :main_app do |current_user|
+        respond_to do |format|
+          format.html { render }
+          format.rss {
+            if @page.contains_feed?
+              render :action => "show", :layout => false, :handlers => [:builder]
+            else
+              render :xml => {:error => 'Not found'}, :status => 404
+            end
+          }
+        end
       end
     end
 

@@ -26,14 +26,14 @@ Alchemy::Engine.routes.draw do
   end
 
   # This actualy does all the Devise magic. I.e. current_user method in ApplicationController
-  devise_for(
-    :user,
-    :class_name => 'Alchemy::User',
-    :controllers => {
-      :sessions => 'alchemy/user_sessions'
-    },
-    :skip => [:sessions, :passwords] # skipping Devise default routes.
-  )
+  # devise_for(
+  #   :user,
+  #   :class_name => 'Alchemy::User',
+  #   :controllers => {
+  #     :sessions => 'alchemy/user_sessions'
+  #   },
+  #   :skip => [:sessions, :passwords] # skipping Devise default routes.
+  # )
 
   get '/admin/signup' => 'users#new', :as => :signup
   post '/admin/signup' => 'users#create', :as => :signup

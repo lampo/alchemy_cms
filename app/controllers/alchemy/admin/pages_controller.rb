@@ -35,7 +35,9 @@ module Alchemy
         @root_page = Page.language_root_for(session[:language_id])
         # Setting the locale to pages language. so the page content has its correct translation
         ::I18n.locale = @page.language_code
-        render :layout => layout_for_page
+        current_user_as :main_app do |current_user|
+          render :layout => layout_for_page
+        end
       rescue Exception => e
         exception_logger(e)
         render :file => Rails.root.join('public', '500.html'), :status => 500, :layout => false

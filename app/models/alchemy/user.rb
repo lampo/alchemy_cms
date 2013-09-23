@@ -8,7 +8,7 @@ module Alchemy
     stampable(:stamper_class_name => 'Alchemy::User')
 
     begin
-      devise(*Config.get(:devise_modules))
+      # devise(*Config.get(:devise_modules))
     rescue NameError => e
       abort <<-WARN
 You enabled the encryptable devise module, but did not have the `devise-encryptable` gem installed!
