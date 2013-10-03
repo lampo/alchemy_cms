@@ -15,9 +15,9 @@ module Alchemy
   private
 
     # Override for Devise method
-    def new_session_path(resource_name)
-      alchemy.login_path
-    end
+    # def new_session_path(resource_name)
+    #   alchemy.login_path
+    # end
 
     def edit_password_url(resource, options={})
       alchemy.edit_password_url(options)
