@@ -217,7 +217,8 @@ module Alchemy
           render :action => :permission_denied
         else
           store_location
-          redirect_to new_user_session_path
+          # redirect_to main_app.new_user_session_path
+          redirect_to main_app.root_path, alert: "You are not authorized"
         end
       end
     end
