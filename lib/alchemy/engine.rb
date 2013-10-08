@@ -1,6 +1,9 @@
 # Require globally used external libraries
-require 'coffee-rails'
-require 'compass-rails'
+# JDY Commented out the lines below because they are/should
+# be in the "assets" group?
+
+# JDY require 'coffee-rails'
+# JDY require 'compass-rails'
 require 'declarative_authorization'
 require 'devise'
 require 'dynamic_form'
@@ -8,7 +11,7 @@ require 'jquery-rails'
 require 'jquery-ui-rails'
 require 'kaminari'
 require 'rails3-jquery-autocomplete'
-require 'sass-rails'
+# JDY require 'sass-rails'
 require 'sassy-buttons'
 
 # Require globally used Alchemy mixins

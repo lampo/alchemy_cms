@@ -1,6 +1,6 @@
 module Alchemy
 
-  VERSION = "2.7.0.lampo.3"
+  VERSION = "2.7.0.lampo.4"
 
   def self.version
     VERSION
