@@ -13,6 +13,8 @@ require 'kaminari'
 require 'rails3-jquery-autocomplete'
 # JDY require 'sass-rails'
 require 'sassy-buttons'
+# JDY added
+require 'userstamp'
 
 # Require globally used Alchemy mixins
 require 'alchemy/auth/engine'
